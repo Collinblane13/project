@@ -11,6 +11,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+
  
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MatRadioModule,
     MatFormFieldModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   providers: [
     provideAnimationsAsync()

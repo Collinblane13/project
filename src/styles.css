@@ -29,7 +29,8 @@ header {margin: 25px; text-align: center; color:white;}
     margin-left: 100px;
     background-color: grey;
     color: white;
-    text-align: center; 
+    text-align: center;
+    border-radius: 15px; 
 }
 
 .cardmacro{
@@ -40,7 +41,8 @@ header {margin: 25px; text-align: center; color:white;}
     margin-left: 100px;
     background-color: grey;
     color: white;
-    text-align: center; 
+    text-align: center;
+    border-radius: 15px;  
 }
 
 
@@ -48,6 +50,33 @@ header {margin: 25px; text-align: center; color:white;}
     padding:20px;
     text-align: center;
 }
+
+.cardwork{
+    padding:20px;
+    height: 100%;
+    width: 750px;
+    max-width: 750px;
+    margin-left: 100px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border-radius: 15px;  
+}
+
+.inner{
+    padding:20px;
+    height: 100%;
+    width: 300px;
+    max-width: 300px;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 15px;  
+}
+
+
+
 
 
 
