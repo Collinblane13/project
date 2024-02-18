@@ -9,6 +9,11 @@ header {margin: 25px; text-align: center; color:white;}
     padding:20px;
 }
 
+.flexmacro{
+    display:flex;
+    padding:20px;
+    column-gap: 100px;
+}
 .flexbmr{
     display:flex;
     border-top: 0px;
@@ -21,6 +26,17 @@ header {margin: 25px; text-align: center; color:white;}
     height: 100%;
     width: 400px;
     max-width: 300px;
+    margin-left: 100px;
+    background-color: grey;
+    color: white;
+    text-align: center; 
+}
+
+.cardmacro{
+    padding:20px;
+    height: 100%;
+    width: 400px;
+    max-width: 600px;
     margin-left: 100px;
     background-color: grey;
     color: white;
