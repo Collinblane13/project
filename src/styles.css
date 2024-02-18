@@ -9,6 +9,13 @@ header {margin: 25px; text-align: center; color:white;}
     padding:20px;
 }
 
+.flexbmr{
+    display:flex;
+    border-top: 0px;
+    padding-top: 0px;
+    column-gap: 240px;
+}
+
 .card{
     padding:20px;
     height: 100%;
@@ -19,6 +26,7 @@ header {margin: 25px; text-align: center; color:white;}
     color: white;
     text-align: center; 
 }
+
 
 .center{
     padding:20px;

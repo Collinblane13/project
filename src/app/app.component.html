@@ -98,8 +98,41 @@
                 </div>
             </mat-tab>
             <mat-tab label="BMR Calculator">
+                <p class="mat-headline-2 center">Calories You Need to:</p>
+                <div class="flexbmr">
+                    <div class="card">
+                        <mat-card>
+                            <mat-card-header>
+                                <h1>Calories to Lose</h1>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <h1 [innerHTML]="losestr"></h1>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="card">
+                        <mat-card>
+                            <mat-card-header>
+                                <h1>Calories to Maintain</h1>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <h1 [innerHTML]="bmr"></h1>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="card">
+                        <mat-card>
+                            <mat-card-header>
+                                <h1>Calories to Gain</h1>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <h1 [innerHTML]="gain"></h1>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
                 <p class="mat-headline-2 center">What Is your?</p>
-                    <div class="flex">
+                    <div class="flexbmr">
                         <div class="card">
                             <mat-card>
                                 <mat-card-header>
@@ -109,10 +142,10 @@
                                     <input [(ngModel)]="weight"/>
                                     <label for="weight">Weight</label>
                                     <mat-radio-group aria-labelledby="radio"[(ngModel)]="unitw">
-                                        <mat-radio-button value="lbs" (change)="OnChange($event)" color="primary" default>
+                                        <mat-radio-button value="lbs" color="primary" default>
                                             lbs
                                         </mat-radio-button>
-                                        <mat-radio-button value="kgs" (change)="OnChange($event)" color="primary">
+                                        <mat-radio-button value="kgs" color="primary">
                                             kgs
                                         </mat-radio-button>
                                     </mat-radio-group>
@@ -128,10 +161,10 @@
                                     <input [(ngModel)]="height"/>
                                     <label for="height">Height</label>
                                     <mat-radio-group aria-labelledby="radio"[(ngModel)]="unith">
-                                        <mat-radio-button value="in" (change)="OnChange2($event)" color="primary" default>
+                                        <mat-radio-button value="in" color="primary">
                                             in
                                         </mat-radio-button>
-                                        <mat-radio-button value="cm" (change)="OnChange2($event)" color="primary">
+                                        <mat-radio-button value="cm" color="primary">
                                             cm
                                         </mat-radio-button>
                                     </mat-radio-group>
@@ -157,22 +190,14 @@
                                 </mat-card-content>
                             </mat-card>
                         </div>
-                        <div class="card">
-                            <mat-card>
-                                <mat-card-header>
-                                    <h1 class="center">Your BMR Is:</h1>
-                                </mat-card-header>
-                                <mat-card-content>
-                                    <h1 [innerHTML]="fweight"></h1>
-                                </mat-card-content>
-                            </mat-card>
-                        </div>
                     </div>
                 <div class="center">
                     <button mat-raised-button color="primary" (click)="onClick()">Submit</button>
                 </div>
             </mat-tab>
-            <mat-tab label="Macro Guides"> Words </mat-tab>
+            <mat-tab label="Macro Guides"> Words 
+                
+            </mat-tab>
             <mat-tab label="Workout Guidlines"> Content 4 </mat-tab>
           </mat-tab-group>
     </main>

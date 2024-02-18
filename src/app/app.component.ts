@@ -17,6 +17,11 @@ export class AppComponent {
   unith: string = "in";
   age: number = 0;
   bmr: number = 0;
+  lose: number = 0;
+  gain: number = 0;
+  losestr: string = "0";
+  gainstr: string = "0";
+  bmrstr: string = "0";
 
   OnChange(mrChange: MatRadioChange){
     if(this.unitw == "lbs"){
@@ -40,21 +45,45 @@ export class AppComponent {
 
   onClick(){
     if(this.gender == "m"){
+      this.tocm();
+      this.tokg();
       this.maleBMR();
+      this.lose = this.bmr - 500;
+      this.gain = this.bmr + 500;
+      this.losestr = this.lose + " kcal";
+      this.gainstr = this.gain + " kcal";
+      this.bmrstr = this.bmr + " kcal";
     }
     else{
+      this.tocm();
+      this.tokg();
       this.femaleBMR();
+      this.lose = this.bmr - 500;
+      this.gain = this.bmr + 500;
+      this.losestr = this.lose + " kcal";
+      this.gainstr = this.gain + " kcal";
+      this.bmrstr = this.bmr + " kcal";
     }
   }
 
   
 
   tocm(){
-    this.fheight = Math.round(this.height * 2.5);
+    if(this.unith == "in"){
+      this.fheight = Math.round(this.height * 2.5);
+    }
+    else{
+      this.fheight = this.height;
+    }
   }
 
   tokg(){
-    this.fweight = Math.round(this.weight / 2.2);
+    if(this.unitw == "lbs"){
+      this.fweight = Math.round(this.weight / 2.2);
+    }
+    else{
+      this.fweight = this.weight;
+    }
   }
   maleBMR(){
     this.bmr = Math.round((10 * this.fweight) + (6.25 * this.fheight) - (5 * this.age) + 5);
