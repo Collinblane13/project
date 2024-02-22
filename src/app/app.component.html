@@ -37,207 +37,211 @@
     <main>
         <mat-tab-group animationDuration="0ms">
             <mat-tab label="Getting Started">  
-                <div class="flex">
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>Intro</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>
-                                    Forming your body into something that you can be happy with is a hard thing to accomplish. Some people want to lose fat
-                                    others are more conscerned with gaining muscle, this makes a dilemma where there is no one good way to accomplish everything
-                                    That is what the site is made for! Your goals can be broken down and filtered through how many calories you need to ingest
-                                    during the day, what workouts you need to do, and what specific food you are putting into your body.
-                                </p> 
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>About BMR</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>
-                                    BMR is a fancy way of saying how many calories you body will naturally burn during the day. Sadly with how special everyone is, 
-                                    we can only give an estimate of where to start. With this estimate though you can better figure out your needs for your goals, 
-                                    and get to the point where you are balancing your calories in and calories out like a champ.
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>About Macros</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>
-                                    Macros are probably the hardest part to actually commit to. This is the process of structing your diet in a way where
-                                    so muc of a percentage of you calories comes from fat, another percentage comes from carbs, and the remaining percentage comes
-                                    from protein.
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>About Workouts</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>
-                                    Workouts are not jsut ways to burn calories so you can eat more during the day, they are also the best way to form the body that you 
-                                    want. Making choices between cardio and weight lifting, intense short exersices or longer more sustained endurance workouts, they help
-                                    make your body function in specific ways.
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
+                <div class="container">
+                    <div class="row">
+                        <div class="card col-lg-5 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>Intro</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>
+                                        Forming your body into something that you can be happy with is a hard thing to accomplish. Some people want to lose fat
+                                        others are more conscerned with gaining muscle, this makes a dilemma where there is no one good way to accomplish everything
+                                        That is what the site is made for! Your goals can be broken down and filtered through how many calories you need to ingest
+                                        during the day, what workouts you need to do, and what specific food you are putting into your body.
+                                    </p> 
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-5 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>About BMR</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>
+                                        BMR is a fancy way of saying how many calories you body will naturally burn during the day. Sadly with how special everyone is, 
+                                        we can only give an estimate of where to start. With this estimate though you can better figure out your needs for your goals, 
+                                        and get to the point where you are balancing your calories in and calories out like a champ.
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-5 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>About Macros</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>
+                                        Macros are probably the hardest part to actually commit to. This is the process of structing your diet in a way where
+                                        so muc of a percentage of you calories comes from fat, another percentage comes from carbs, and the remaining percentage comes
+                                        from protein.
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-5 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>About Workouts</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>
+                                        Workouts are not jsut ways to burn calories so you can eat more during the day, they are also the best way to form the body that you 
+                                        want. Making choices between cardio and weight lifting, intense short exersices or longer more sustained endurance workouts, they help
+                                        make your body function in specific ways.
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
                     </div>         
                 </div>
             </mat-tab>
             <mat-tab label="BMR Calculator">
                 <p class="mat-headline-2 center">Calories You Need to:</p>
-                <div class="flexbmr">
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>Lose</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <h1 [innerHTML]="losestr"></h1>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>Maintain</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <h1 [innerHTML]="bmr"></h1>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="card">
-                        <mat-card>
-                            <mat-card-header>
-                                <h1>Gain</h1>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <h1 [innerHTML]="gain"></h1>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                </div>
-                <p class="mat-headline-2 center">What Is your?</p>
-                    <div class="flexbmr">
-                        <div class="card">
+                <div class="container">
+                    <div class="row">
+                        <div class="card col-lg-3 col-12">
                             <mat-card>
                                 <mat-card-header>
-                                    <h2>Weight?</h2>
+                                    <h1>Lose</h1>
                                 </mat-card-header>
                                 <mat-card-content>
-                                    <input [(ngModel)]="weight"/>
-                                    <label for="weight">Weight</label>
-                                    <mat-radio-group aria-labelledby="radio"[(ngModel)]="unitw">
-                                        <mat-radio-button value="lbs" color="primary" default>
-                                            lbs
-                                        </mat-radio-button>
-                                        <mat-radio-button value="kgs" color="primary">
-                                            kgs
-                                        </mat-radio-button>
-                                    </mat-radio-group>
+                                    <h1 [innerHTML]="losestr"></h1>
                                 </mat-card-content>
                             </mat-card>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-3 col-12">
                             <mat-card>
                                 <mat-card-header>
-                                    <h2>Height?</h2>
+                                    <h1>Maintain</h1>
                                 </mat-card-header>
                                 <mat-card-content>
-                                    <input [(ngModel)]="height"/>
-                                    <label for="height">Height</label>
-                                    <mat-radio-group aria-labelledby="radio"[(ngModel)]="unith">
-                                        <mat-radio-button value="in" color="primary">
-                                            in
-                                        </mat-radio-button>
-                                        <mat-radio-button value="cm" color="primary">
-                                            cm
-                                        </mat-radio-button>
-                                    </mat-radio-group>
+                                    <h1 [innerHTML]="bmr"></h1>
                                 </mat-card-content>
                             </mat-card>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-3 col-12">
                             <mat-card>
                                 <mat-card-header>
-                                    <h2>Age and Gender?</h2>
+                                    <h1>Gain</h1>
                                 </mat-card-header>
                                 <mat-card-content>
-                                    <input [(ngModel)]="age"/>
-                                    <label for="age">Age</label>
-                                    <mat-radio-group aria-labelledby="radio"[(ngModel)]="gender">
-                                        <mat-radio-button value="m" color="primary" defualt>
-                                            Male
-                                        </mat-radio-button>
-                                        <mat-radio-button value="f" color="primary">
-                                            Female
-                                        </mat-radio-button>
-                                    </mat-radio-group>
+                                    <h1 [innerHTML]="gain"></h1>
                                 </mat-card-content>
-                            </mat-card>
+                            </mat-card>   
                         </div>
+                        <p class="mat-headline-2 center col-12">What Is your?</p>
+                            <div class="card col-lg-3 col-12">
+                                <mat-card>
+                                    <mat-card-header>
+                                        <h2>Weight?</h2>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <input [(ngModel)]="weight"/>
+                                        <label for="weight">Weight</label>
+                                        <mat-radio-group aria-labelledby="radio"[(ngModel)]="unitw">
+                                            <mat-radio-button value="lbs" color="primary" default>
+                                                lbs
+                                            </mat-radio-button>
+                                            <mat-radio-button value="kgs" color="primary">
+                                                kgs
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                            <div class="card col-lg-3 col-12">
+                                <mat-card>
+                                    <mat-card-header>
+                                        <h2>Height?</h2>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <input [(ngModel)]="height"/>
+                                        <label for="height">Height</label>
+                                        <mat-radio-group aria-labelledby="radio"[(ngModel)]="unith">
+                                            <mat-radio-button value="in" color="primary">
+                                                in
+                                            </mat-radio-button>
+                                            <mat-radio-button value="cm" color="primary">
+                                                cm
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                            <div class="card col-lg-3 col-12">
+                                <mat-card>
+                                    <mat-card-header>
+                                        <h2>Age and Gender?</h2>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <input [(ngModel)]="age"/>
+                                        <label for="age">Age</label>
+                                        <mat-radio-group aria-labelledby="radio"[(ngModel)]="gender">
+                                            <mat-radio-button value="m" color="primary" defualt>
+                                                Male
+                                            </mat-radio-button>
+                                            <mat-radio-button value="f" color="primary">
+                                                Female
+                                            </mat-radio-button>
+                                        </mat-radio-group>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                        </div>
+                    <div class="center">
+                        <button mat-raised-button color="primary" (click)="onClick()">Submit</button>
                     </div>
-                <div class="center">
-                    <button mat-raised-button color="primary" (click)="onClick()">Submit</button>
                 </div>
             </mat-tab>
             <mat-tab label="Macro Guides">
                 <p class="mat-headline-2 center">How should you Balance Your Diet?</p>
-                <div class="flexmacro">
-                    <div class="cardmacro">
-                        <mat-card>
-                            <mat-card-header>
-                                <h2>Carbs 45%-65%</h2>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>Carbs are where you are going to get most of your quick energy from during the day
-                                    Your body processes it quickly and helps give oyu energy for long workouts. It also can
-                                    help you feel more full during a meal and aids with regualr bowel movements if you are
-                                    eating the more beneficial whole-grain carbs.
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="cardmacro">
-                        <mat-card>
-                            <mat-card-header>
-                                <h2>Protein 10%-35%</h2>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>Proteins are what most of you body gets made up of. This aids in the building of cells like 
-                                    hair, nails, etc, but also helps with the rebuilding of muscles after hard workouts. This rebulding
-                                    helps with increasing strength gains and mass. You typically want to eat learner protien like chicken and fish.
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
-                    </div>
-                    <div class="cardmacro">
-                        <mat-card>
-                            <mat-card-header>
-                                <h2>Fat 20%-35%</h2>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <p>Fat gets a bad reputaiton and most see it as only a bad thing, but fat is needed for you body to function
-                                    fat is great for cell membrane health, that is why Omega-6 pills are so beneficial to people. Your body also
-                                    uses fat to store energy for times when you do not have access to food, and insulation to protect your organs.
-                                    Good fats are oils like coconut and olive oil and fat from fish.    
-                                </p>
-                            </mat-card-content>
-                        </mat-card>
+                <div class="container">
+                    <div class="row">
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Carbs 45%-65%</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>Carbs are where you are going to get most of your quick energy from during the day
+                                        Your body processes it quickly and helps give oyu energy for long workouts. It also can
+                                        help you feel more full during a meal and aids with regualr bowel movements if you are
+                                        eating the more beneficial whole-grain carbs.
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Protein 10%-35%</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>Proteins are what most of you body gets made up of. This aids in the building of cells like 
+                                        hair, nails, etc, but also helps with the rebuilding of muscles after hard workouts. This rebulding
+                                        helps with increasing strength gains and mass. You typically want to eat learner protien like chicken and fish.
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Fat 20%-35%</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>Fat gets a bad reputaiton and most see it as only a bad thing, but fat is needed for you body to function
+                                        fat is great for cell membrane health, that is why Omega-6 pills are so beneficial to people. Your body also
+                                        uses fat to store energy for times when you do not have access to food, and insulation to protect your organs.
+                                        Good fats are oils like coconut and olive oil and fat from fish.    
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
                     </div>
                 </div>
             </mat-tab>
