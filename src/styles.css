@@ -33,6 +33,17 @@ header {margin: 25px; text-align: center; color:white;}
     border-radius: 15px;  
 }
 
+.foot{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.head{
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 
 
