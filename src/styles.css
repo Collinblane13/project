@@ -39,9 +39,25 @@ header {margin: 25px; text-align: center; color:white;}
 }
 
 .head{
-    background-color: grey;
+    background-color: palevioletred;
     padding: 10px;
     border-radius: 10px;
+}
+
+.mat-mdc-tab:hover{
+    background-color: blue;
+}
+
+.mat-mdc-raised-button.mat-primary:hover{
+    background-color: blue;
+}
+
+.mat-mdc-radio-button.mat-primary:hover{
+    --mdc-radio-unselected-hover-icon-color:blue;
+    --mat-radio-ripple-color: blue;
+}
+.mdc-tab{
+    min-width: auto;
 }
 
 

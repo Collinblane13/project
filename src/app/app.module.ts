@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatRippleModule} from '@angular/material/core';
 
  
 @NgModule({
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatButtonModule,
     FormsModule,
     MatListModule,
-    NgbModule
+    NgbModule,
+    MatRippleModule
   ],
   providers: [
     provideAnimationsAsync()

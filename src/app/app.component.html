@@ -35,8 +35,8 @@
         <p class="mat-headline-1 head">The Iron Temple</p>
     </header>
     <main>
-        <mat-tab-group animationDuration="0ms">
-            <mat-tab label="Getting Started">  
+        <mat-tab-group animationDuration="0ms" color="accent" stretch="false">
+            <mat-tab label="Intro">  
                 <div class="container">
                     <div class="row">
                         <div class="card col-lg-5 col-12">
@@ -99,7 +99,7 @@
                     </div>         
                 </div>
             </mat-tab>
-            <mat-tab label="BMR Calculator">
+            <mat-tab label="BMR">
                 <p class="mat-headline-2 center">Calories You Need to:</p>
                 <div class="container">
                     <div class="row">
@@ -193,11 +193,11 @@
                             </div>
                         </div>
                     <div class="center">
-                        <button mat-raised-button color="primary" (click)="onClick()">Submit</button>
+                        <button class="button" mat-raised-button color="primary" (click)="onClick()">Submit</button>
                     </div>
                 </div>
             </mat-tab>
-            <mat-tab label="Macro Guides">
+            <mat-tab label="Macros">
                 <p class="mat-headline-2 center">How should you Balance Your Diet?</p>
                 <div class="container">
                     <div class="row">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
             </mat-tab>
-            <mat-tab label="Workout Guidlines">
+            <mat-tab label="Workouts">
                 <div class="container">
                     <div class="row">
                         <div class="card col-12 col-lg-5">
