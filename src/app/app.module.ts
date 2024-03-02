@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatRippleModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+
+
 
  
 @NgModule({
@@ -32,7 +35,8 @@ import {MatRippleModule} from '@angular/material/core';
     FormsModule,
     MatListModule,
     NgbModule,
-    MatRippleModule
+    MatRippleModule,
+    MatInputModule
   ],
   providers: [
     provideAnimationsAsync()

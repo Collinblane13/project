@@ -133,14 +133,21 @@
                                 </mat-card-content>
                             </mat-card>   
                         </div>
-                        <p class="mat-headline-2 center col-12">What Is your?</p>
+                        <div>
+                            <br>
+                            <br>
+                            <p class="mat-headline-2 center col-12">What Is your?</p>
+                        </div>
                             <div class="card col-lg-3 col-12">
                                 <mat-card>
                                     <mat-card-header>
                                         <h2>Weight?</h2>
                                     </mat-card-header>
                                     <mat-card-content>
-                                        <input [(ngModel)]="weight"/>
+                                        <mat-form-field floatLabel="auto" appearance="fill" hideRequiredMarker>
+                                            <mat-label>Weight</mat-label>
+                                            <input matInput required [(ngModel)]="weight" >
+                                        </mat-form-field>
                                         <label for="weight">Weight</label>
                                         <mat-radio-group aria-labelledby="radio"[(ngModel)]="unitw">
                                             <mat-radio-button value="lbs" color="primary" default>
@@ -159,7 +166,10 @@
                                         <h2>Height?</h2>
                                     </mat-card-header>
                                     <mat-card-content>
-                                        <input [(ngModel)]="height"/>
+                                        <mat-form-field floatLabel="auto" appearance="fill" hideRequiredMarker>
+                                            <mat-label>Height</mat-label>
+                                            <input matInput required [(ngModel)]="height" default="personal">
+                                        </mat-form-field>
                                         <label for="height">Height</label>
                                         <mat-radio-group aria-labelledby="radio"[(ngModel)]="unith">
                                             <mat-radio-button value="in" color="primary">
@@ -178,7 +188,10 @@
                                         <h2>Age and Gender?</h2>
                                     </mat-card-header>
                                     <mat-card-content>
-                                        <input [(ngModel)]="age"/>
+                                        <mat-form-field floatLabel="auto" appearance="fill" hideRequiredMarker>
+                                            <mat-label>Age</mat-label>
+                                            <input matInput required [(ngModel)]="age" >
+                                        </mat-form-field>
                                         <label for="age">Age</label>
                                         <mat-radio-group aria-labelledby="radio"[(ngModel)]="gender">
                                             <mat-radio-button value="m" color="primary" defualt>
@@ -234,10 +247,10 @@
                                     <h2>Fat 20%-35%</h2>
                                 </mat-card-header>
                                 <mat-card-content>
-                                    <p>Fat gets a bad reputaiton and most see it as only a bad thing, but fat is needed for you body to function
+                                    <p>Fat gets a bad rep and most see it as only a bad thing, but fat is needed for you body to function.
                                         fat is great for cell membrane health, that is why Omega-6 pills are so beneficial to people. Your body also
-                                        uses fat to store energy for times when you do not have access to food, and insulation to protect your organs.
-                                        Good fats are oils like coconut and olive oil and fat from fish.    
+                                        uses fat to store energy for times when you don't have access to food, and insulation to protect your organs.
+                                        Good fats are oils like olive oil and fat from fish.    
                                     </p>
                                 </mat-card-content>
                             </mat-card>

@@ -14,12 +14,15 @@ header {margin: 25px; text-align: center; color:white;}
     background-color: grey;
     color: white;
     text-align: center;
-    border-radius: 15px; 
+    border-radius: 15px;
+    transition: .5s; 
 }
 
 .center{
     padding:20px;
     text-align: center;
+    margin-top:40px;
+    transition: .5s;
 }
 
 
@@ -49,7 +52,7 @@ header {margin: 25px; text-align: center; color:white;}
 }
 
 .mat-mdc-raised-button.mat-primary:hover{
-    background-color: blue;
+    transform: scale(1.5);
 }
 
 .mat-mdc-radio-button.mat-primary:hover{
@@ -58,6 +61,9 @@ header {margin: 25px; text-align: center; color:white;}
 }
 .mdc-tab{
     min-width: auto;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 
 

@@ -22,6 +22,7 @@ export class AppComponent {
   losestr: string = "0";
   gainstr: string = "0";
   bmrstr: string = "0";
+  wtstr: string = "";
 
   OnChange(mrChange: MatRadioChange){
     if(this.unitw == "lbs"){
@@ -43,8 +44,10 @@ export class AppComponent {
     console.log(mrchange.value);
   }
 
+
   onClick(){
     if(this.gender == "m"){
+      this.wtstr += this.weight;
       this.tocm();
       this.tokg();
       this.maleBMR();
@@ -53,8 +56,10 @@ export class AppComponent {
       this.losestr = this.lose + " kcal";
       this.gainstr = this.gain + " kcal";
       this.bmrstr = this.bmr + " kcal";
+      this.saveData('personal', this.wtstr)
     }
     else{
+      this.wtstr += this.weight;
       this.tocm();
       this.tokg();
       this.femaleBMR();
@@ -63,6 +68,7 @@ export class AppComponent {
       this.losestr = this.lose + " kcal";
       this.gainstr = this.gain + " kcal";
       this.bmrstr = this.bmr + " kcal";
+      this.saveData('personal', this.wtstr)
     }
   }
 
@@ -91,5 +97,20 @@ export class AppComponent {
 
   femaleBMR(){
     this.bmr = Math.round((10 * this.fweight) + (6.25 * this.fheight) - (5 * this.age) - 161);
+  }
+
+  public saveData(key: string, value: string) {
+    localStorage.setItem(key, value);
+  }
+
+  public getData(key: string) {
+    return localStorage.getItem(key)
+  }
+  public removeData(key: string) {
+    localStorage.removeItem(key);
+  }
+
+  public clearData() {
+    localStorage.clear();
   }
 }
