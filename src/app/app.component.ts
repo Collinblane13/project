@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatRadioChange } from '@angular/material/radio';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,12 +18,10 @@ export class AppComponent {
   unith: string = "in";
   age: number = 0;
   bmr: number = 0;
-  lose: number = 0;
-  gain: number = 0;
-  losestr: string = "0";
-  gainstr: string = "0";
-  bmrstr: string = "0";
+  cal: number = 0;
+  kcal: string = "This is how many calories you need in a day";
   wtstr: string = "";
+  goal: string = "";
 
   OnChange(mrChange: MatRadioChange){
     if(this.unitw == "lbs"){
@@ -45,17 +44,23 @@ export class AppComponent {
   }
 
 
-  onClick(){
+onClick(){
     if(this.gender == "m"){
       this.wtstr += this.weight;
       this.tocm();
       this.tokg();
       this.maleBMR();
-      this.lose = this.bmr - 500;
-      this.gain = this.bmr + 500;
-      this.losestr = this.lose + " kcal";
-      this.gainstr = this.gain + " kcal";
-      this.bmrstr = this.bmr + " kcal";
+      if(this.goal == "lose"){
+        this.cal = this.bmr - 500;
+        this.kcal = "you need to have " + this.cal + " calories.";
+      }
+      else if(this.goal == "main"){
+        this.kcal = "you need to have " + this.bmr + " calories.";
+      }
+      else{
+        this.cal = this.bmr + 500;
+        this.kcal = "you need to have " + this.cal + " calories.";
+      }
       this.saveData('personal', this.wtstr)
     }
     else{
@@ -63,11 +68,7 @@ export class AppComponent {
       this.tocm();
       this.tokg();
       this.femaleBMR();
-      this.lose = this.bmr - 500;
-      this.gain = this.bmr + 500;
-      this.losestr = this.lose + " kcal";
-      this.gainstr = this.gain + " kcal";
-      this.bmrstr = this.bmr + " kcal";
+      
       this.saveData('personal', this.wtstr)
     }
   }

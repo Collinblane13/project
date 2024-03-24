@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatRippleModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -36,7 +37,8 @@ import {MatInputModule} from '@angular/material/input';
     MatListModule,
     NgbModule,
     MatRippleModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync()

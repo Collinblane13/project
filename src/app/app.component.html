@@ -100,39 +100,8 @@
                 </div>
             </mat-tab>
             <mat-tab label="BMR">
-                <p class="mat-headline-2 center">Calories You Need to:</p>
                 <div class="container">
                     <div class="row">
-                        <div class="card col-lg-3 col-12">
-                            <mat-card>
-                                <mat-card-header>
-                                    <h1>Lose</h1>
-                                </mat-card-header>
-                                <mat-card-content>
-                                    <h1 [innerHTML]="losestr"></h1>
-                                </mat-card-content>
-                            </mat-card>
-                        </div>
-                        <div class="card col-lg-3 col-12">
-                            <mat-card>
-                                <mat-card-header>
-                                    <h1>Maintain</h1>
-                                </mat-card-header>
-                                <mat-card-content>
-                                    <h1 [innerHTML]="bmrstr"></h1>
-                                </mat-card-content>
-                            </mat-card>
-                        </div>
-                        <div class="card col-lg-3 col-12">
-                            <mat-card>
-                                <mat-card-header>
-                                    <h1>Gain</h1>
-                                </mat-card-header>
-                                <mat-card-content>
-                                    <h1 [innerHTML]="gainstr"></h1>
-                                </mat-card-content>
-                            </mat-card>   
-                        </div>
                         <div>
                             <br>
                             <br>
@@ -204,6 +173,33 @@
                                     </mat-card-content>
                                 </mat-card>
                             </div>
+                            <p class="mat-headline-2 center">Caloric Intake</p>
+                            <div class="card col-lg-3 col-12">
+                                <mat-card>
+                                    <mat-card-header>
+                                        <h1>Weight Goal</h1>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <mat-form-field>
+                                            <mat-select placeholder="Goal" [(ngModel)]="goal">
+                                                <mat-option value="gain">Gain</mat-option>
+                                                <mat-option value="main">Maintain</mat-option>
+                                                <mat-option value="lose">Lose</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </mat-card-content>
+                                </mat-card>
+                            </div>
+                            <div class="card col-lg-3 col-12">
+                                <mat-card>
+                                    <mat-card-header>
+                                        <h1>Calories Needed:</h1>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <h1 [innerHTML]="kcal"></h1>
+                                    </mat-card-content>
+                                </mat-card>   
+                            </div>
                         </div>
                     <div class="center">
                         <button class="button" mat-raised-button color="primary" (click)="onClick()">Submit</button>
@@ -255,6 +251,38 @@
                                 </mat-card-content>
                             </mat-card>
                         </div>
+                        <!--
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>Protein</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <h1 [innerHTML]="prot"></h1>
+                                </mat-card-content>
+                            </mat-card>   
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>Carbs</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <h1 [innerHTML]="carb"></h1>
+                                </mat-card-content>
+                            </mat-card>   
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h1>Fat</h1>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <h1 [innerHTML]="fat"></h1>
+                                </mat-card-content>
+                            </mat-card>   
+                        </div>
+                        -->
                     </div>
                 </div>
             </mat-tab>
@@ -352,10 +380,7 @@
             </mat-tab>
         </mat-tab-group>
     </main>
-    <footer class="foot">
-        <p>
-            Last Revision: 2/25/2024
-        </p>        
+    <footer>    
     </footer>
 </body>
 </html>
