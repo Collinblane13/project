@@ -251,6 +251,49 @@
                                 </mat-card-content>
                             </mat-card>
                         </div>
+                        <p class="mat-headline-2 center">Caloric Intake per Macro</p>
+                        <div class="card col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Reminder</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p>You must only eat the amount of calories in from the bmr tab so if you go to the high end of the spectrum of one of these
+                                        Macros you must go to the low end on another
+                                    </p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Carbs</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p [innerHTML]="carb"></p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Protein</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p [innerHTML]="protein"></p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="card col-lg-3 col-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <h2>Fat</h2>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p [innerHTML]="fat"></p>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
                         <!--
                         <div class="card col-lg-3 col-12">
                             <mat-card>
@@ -398,7 +441,13 @@
             </mat-tab>
         </mat-tab-group>
     </main>
-    <footer>    
+    <footer>
+        <div>
+            <br>
+            <br>
+            <p class="foot" [innerHTML]="kcal">
+            </p>
+        </div>    
     </footer>
 </body>
 </html>

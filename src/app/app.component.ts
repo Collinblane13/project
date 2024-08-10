@@ -22,6 +22,15 @@ export class AppComponent {
   kcal: string = "This is how many calories you need in a day";
   wtstr: string = "";
   goal: string = "";
+  carbLow: number = 0;
+  carbHigh: number = 0;
+  carb: string = "";
+  fat: string = "";
+  fatLow: number = 0;
+  fatHigh: number = 0;
+  protein: string = "";
+  proteinLow: number = 0;
+  proteinHigh: number = 0;
 
   OnChange(mrChange: MatRadioChange){
     if(this.unitw == "lbs"){
@@ -53,13 +62,25 @@ onClick(){
       if(this.goal == "lose"){
         this.cal = this.bmr - 500;
         this.kcal = "you need to have " + this.cal + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
       }
       else if(this.goal == "main"){
         this.kcal = "you need to have " + this.bmr + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
       }
       else{
         this.cal = this.bmr + 500;
         this.kcal = "you need to have " + this.cal + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
       }
       this.saveData('personal', this.wtstr)
     }
@@ -68,12 +89,41 @@ onClick(){
       this.tocm();
       this.tokg();
       this.femaleBMR();
-      
+      if(this.goal == "lose"){
+        this.cal = this.bmr - 500;
+        this.kcal = "you need to have " + this.cal + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
+      }
+      else if(this.goal == "main"){
+        this.kcal = "you need to have " + this.bmr + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
+      }
+      else{
+        this.cal = this.bmr + 500;
+        this.kcal = "you need to have " + this.cal + " calories.";
+        this.macroCalc();
+        this.carb = this.carbLow + " kcal - " + this.carbHigh + " kcal";
+        this.protein = this.proteinLow + " kcal - " + this.proteinHigh + " kcal";
+        this.fat = this.fatLow + " kcal - " + this.fatHigh + " kcal";
+      } 
       this.saveData('personal', this.wtstr)
     }
   }
 
-  
+  macroCalc(){
+    this.carbLow = Math.floor(this.cal * 0.45);
+    this.carbHigh = Math.floor(this.cal * 0.65);
+    this.fatLow = Math.floor(this.cal * 0.2);
+    this.fatHigh = Math.floor(this.cal * 0.35);
+    this.proteinLow = Math.floor(this.cal * 0.1);
+    this.proteinHigh = Math.floor(this.cal * 0.35);
+  }
 
   tocm(){
     if(this.unith == "in"){
